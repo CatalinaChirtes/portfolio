@@ -1,0 +1,58 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10em;
+}
+
+.mat-toolbar {
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+
+}
+
+.last {
+    margin-right: 10em;
+    font-size: 14px;
+}
+
+* {
+    font-family: "Roboto Mono", monospace !important;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .name {
+        margin-left: 8px;
+    }
+
+    .last {
+        margin-right: 0em;
+    }
+}
+
+::ng-deep .custom-button:hover, 
+a[mat-button]:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+// ::ng-deep .mat-mdc-button .mat-mdc-button-ripple, .mat-mdc-unelevated-button .mat-mdc-button-ripple, .mat-mdc-raised-button .mat-mdc-button-ripple, .mat-mdc-outlined-button .mat-mdc-button-ripple {
+//     background-color: white;
+// }
+
+.mat-mdc-icon-button {
+    border-radius: 0px;
+    --mat-icon-button-state-layer-color: transparent;
+    --mat-icon-button-ripple-color: transparent;
+}
