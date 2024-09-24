@@ -1,28 +1,29 @@
-<app-toolbar></app-toolbar>
+<section>
+    <app-toolbar></app-toolbar>
+    <video [muted]="'muted'" autoplay muted>
+        <source src="animation.mp4" type="video/mp4">
+    </video>
+</section>
 
-<video [muted]="'muted'" autoplay muted>
-    <source src="animation.mp4" type="video/mp4">
-</video>
-
-<div class="below-video-card">
-    <mat-card appearance="outlined">
-        <mat-card-content>Simple card</mat-card-content>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-        <mat-card-content>Simple card</mat-card-content>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-        <mat-card-content>Simple card</mat-card-content>
-    </mat-card>
-</div>
+<section class="solar">
+    <div class="row">
+        <div class="column left">
+            <p class="title-p">Solar Solutions</p>
+            <iframe class="solar-home" src="https://xd.adobe.com/embed/537c102a-1fbe-4fae-b5cc-267cc76fa57a-062f/" frameborder="0" allowfullscreen></iframe>
+            <p class="small-p">Web platform for recommending and building solar panel solutions.</p>
+        </div>
+        <div class="column right">
+            <img class="solar-img" src="solar.png" alt="Solar Solutions Wireframes">
+        </div>
+    </div>
+</section>
+<section class="brew-buddy"></section>
 
 <footer>
-    <p class="footer-text">cătălina chirteș &#64; 2024</p>
+    <p>cătălina chirteș &#64; 2024</p>
     <a mat-icon-button href="https://www.linkedin.com/in/catalina-adela-chirtes/" target="_blank">
         <img class="icon" src="linkedin.svg" alt="LinkedIn"/>
-      </a>
+        </a>
     <a mat-icon-button href="https://github.com/CatalinaChirtes" target="_blank">
         <img class="icon" src="github.svg" alt="Github"/>
     </a>

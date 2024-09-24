@@ -4,11 +4,12 @@ import { ToolbarComponent } from "./shared/toolbar/toolbar.component";
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ToolbarComponent, MatCardModule, MatIconModule, MatButtonModule],
+  imports: [RouterOutlet, ToolbarComponent, MatCardModule, MatIconModule, MatButtonModule, MatGridList, MatGridTile],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

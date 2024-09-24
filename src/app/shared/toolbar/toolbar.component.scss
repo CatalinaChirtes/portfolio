@@ -12,7 +12,6 @@
     background-color: transparent;
     position: sticky;
     top: 0;
-
 }
 
 .last {
@@ -31,7 +30,7 @@ button:hover {
     font-weight: 600;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .name {
         margin-left: 8px;
     }
@@ -46,10 +45,6 @@ a[mat-button]:hover {
   font-weight: bold;
   background-color: transparent;
 }
-
-// ::ng-deep .mat-mdc-button .mat-mdc-button-ripple, .mat-mdc-unelevated-button .mat-mdc-button-ripple, .mat-mdc-raised-button .mat-mdc-button-ripple, .mat-mdc-outlined-button .mat-mdc-button-ripple {
-//     background-color: white;
-// }
 
 .mat-mdc-icon-button {
     border-radius: 0px;
