@@ -8,8 +8,8 @@ app-toolbar {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100dvh;
-    height: 100dvh;
+    width: 100svh;
+    height: 100svh;
     z-index: 1; 
     overflow: hidden;
 }
@@ -35,7 +35,7 @@ video {
 }
 
 .below-video-card {
-    padding-top: 100dvh;
+    padding-top: 100svh;
     z-index: 3;
     position: relative;
     height: 100%;
@@ -77,7 +77,7 @@ section {
 
 .column {
     float: left;
-    height: 100dvh;
+    height: 100svh;
 }
 
 .left {
