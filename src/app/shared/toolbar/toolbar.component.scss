@@ -5,7 +5,7 @@
 .name {
     font-size: 14px;
     font-weight: 500;
-    margin-left: 10em;
+    padding-left: 10em;
 }
 
 .mat-toolbar {
@@ -15,7 +15,7 @@
 }
 
 .last {
-    margin-right: 10em;
+    padding-right: 10em;
     font-size: 14px;
 }
 
@@ -32,11 +32,11 @@ button:hover {
 
 @media only screen and (max-width: 800px) {
     .name {
-        margin-left: 8px;
+        padding-left: 8px;
     }
 
     .last {
-        margin-right: 0em;
+        padding-right: 0em;
     }
 }
 
