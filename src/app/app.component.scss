@@ -96,6 +96,32 @@ section {
     background-position: left center;
 }
 
+.solar-home {
+    width: 100%;
+    height: 50%;
+}
+
+p.small-p {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.brew-buddy {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    object-fit: contain;
+    background-image: url('../../public/brew-buddy-background.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.home {
+    max-height: 80%;
+}
+
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
@@ -134,13 +160,4 @@ section {
     .loading-image {
         display: block;
     }
-}
-
-.solar-home {
-    width: 100%;
-    height: 50%;
-}
-
-p.small-p {
-    font-size: 12px;
 }
