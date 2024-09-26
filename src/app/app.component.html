@@ -1,36 +1,38 @@
-<section>
-    <app-toolbar></app-toolbar>
+<div class="component">
+    <section class="snap-section">
+        <app-toolbar></app-toolbar>
         <img id="loading-image" src="main-screen.jpg" alt="Main Screen" class="loading-image" />
         <video id="video" [muted]="'muted'" autoplay muted>
             <source src="animation.mp4" type="video/mp4">
         </video>
-</section>
+    </section>
 
-<section class="solar">
-    <div class="row">
-        <div class="column left">
-            <p class="title-p">Solar Solutions</p>
-            <iframe class="solar-home" src="https://xd.adobe.com/embed/537c102a-1fbe-4fae-b5cc-267cc76fa57a-062f/" frameborder="0" allowfullscreen></iframe>
-            <p class="small-p">Web platform for recommending and building solar panel solutions.</p>
+    <section class="solar snap-section">
+        <div class="row">
+            <div class="column left">
+                <p class="title-p">Solar Solutions</p>
+                <iframe class="solar-home" src="https://xd.adobe.com/embed/537c102a-1fbe-4fae-b5cc-267cc76fa57a-062f/" frameborder="0" allowfullscreen></iframe>
+                <p class="small-p">Web platform for recommending and building solar panel solutions.</p>
+            </div>
+            <div class="column right"></div>
         </div>
-        <div class="column right"></div>
-    </div>
-</section>
+    </section>
 
-<section class="brew-buddy">
-    <p class="title-p">Brew Buddy</p>
-    <img class="home" src="brew-buddy-home.svg" alt="Brew Buddy Home Page">
-    <p class="small-p">A simple mobile tea companion that allows users to manage their tea collection.</p>
-</section>
+    <section class="brew-buddy snap-section">
+        <p class="title-p">Brew Buddy</p>
+        <img class="home" src="brew-buddy-home.svg" alt="Brew Buddy Home Page">
+        <p class="small-p">A simple mobile tea companion that allows users to manage their tea collection.</p>
+    </section>
 
-<footer>
-    <p>cătălina chirteș &#64; 2024</p>
-    <a mat-icon-button href="https://www.linkedin.com/in/catalina-adela-chirtes/" target="_blank">
-        <img class="icon" src="linkedin.svg" alt="LinkedIn"/>
+    <footer class="snap-section">
+        <p>cătălina chirteș &#64; 2024</p>
+        <a mat-icon-button href="https://www.linkedin.com/in/catalina-adela-chirtes/" target="_blank">
+            <img class="icon" src="linkedin.svg" alt="LinkedIn"/>
+            </a>
+        <a mat-icon-button href="https://github.com/CatalinaChirtes" target="_blank">
+            <img class="icon" src="github.svg" alt="Github"/>
         </a>
-    <a mat-icon-button href="https://github.com/CatalinaChirtes" target="_blank">
-        <img class="icon" src="github.svg" alt="Github"/>
-    </a>
-</footer>
-
-<router-outlet />
+    </footer>
+    
+    <router-outlet />
+</div>
