@@ -30,6 +30,18 @@ button:hover {
     font-weight: 600;
 }
 
+::ng-deep .custom-button:hover, 
+a[mat-button]:hover {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.mat-mdc-icon-button {
+    border-radius: 0px;
+    --mat-icon-button-state-layer-color: transparent;
+    --mat-icon-button-ripple-color: transparent;
+}
+
 @media only screen and (max-width: 800px) {
     .name span {
         display: none;
@@ -48,16 +60,4 @@ button:hover {
     .last {
         padding-right: 0em;
     }
-}
-
-::ng-deep .custom-button:hover, 
-a[mat-button]:hover {
-  font-weight: bold;
-  background-color: transparent;
-}
-
-.mat-mdc-icon-button {
-    border-radius: 0px;
-    --mat-icon-button-state-layer-color: transparent;
-    --mat-icon-button-ripple-color: transparent;
 }
