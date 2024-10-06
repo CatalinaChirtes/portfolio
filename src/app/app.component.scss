@@ -15,12 +15,16 @@ p {
 p.small-p {
     font-size: 12px;
     font-weight: 600;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.description {
+    width: 40%;
 }
 
 a.link-light {
-    color: #cacaca;
+    color: #8e8e8e;
     font-size: 10px;
     font-weight: 600;
 }
@@ -30,7 +34,7 @@ a.link-light:hover {
 }
 
 a.link-dark {
-    color: #cacaca;
+    color: #8e8e8e;
     font-size: 10px;
     font-weight: 600;
 }
@@ -97,7 +101,7 @@ section {
     width: 8px;
     height: 8px;
     margin: 8px 0;
-    background-color: #cacaca;
+    background-color: #8e8e8e;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -105,6 +109,25 @@ section {
 
 .dot.active {
     background-color: #b7818d;
+}
+
+// LABEL
+
+.label {
+    position: absolute;
+    display: inline-block; 
+    top: 0;
+    left: 0;
+    background-image: url('../../public/euglena.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 3;
+
+    .small-p {
+        padding: 0.5em 3em 3em 0.8em;
+        color: black;
+    }
 }
 
 // LANDING PAGE SECTION
@@ -151,8 +174,27 @@ footer {
     text-align: center;
     padding: 4em;
     font-size: 10px;
-    background-color: black;
+    background-color: #b7818d;
     color: white;
+}
+
+// THESIS SECTION
+
+.thesis {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    object-fit: contain;
+    background-image: url('../../public/thesis.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.thesis-home {
+    width: 100%;
+    height: 60%;
 }
 
 // SOLAR SOLUTIONS SECTION
@@ -205,28 +247,31 @@ footer {
 
 .left-movie {
     width: 50%;
+    overflow: hidden;
+    background-image: url('../../public/movie-pages.png');
+    background-size: cover;
+    background-position: right center;
+}
+  
+.right-movie {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-  
-.right-movie {
-    width: 50%;
-    overflow: hidden;
-    background-image: url('../../public/MovieNight-pages.png');
-    background-size: cover;
-    background-position: left center;
-}
 
 .movie-home {
-    max-width: 90%;
+    width: 100%;
+    height: 60%;
 }
 
 .movie {
-    background-color: #540d09;
+    background-color: black;
     color: white;
 }
+
+// SCREEN RESIZE
 
 @media screen and (max-width: 1400px) {
     .left-solar {
@@ -240,11 +285,11 @@ footer {
 
 @media screen and (max-width: 1200px) {
     .left-movie {
-        width: 60%;
+        width: 40%;
     }
 
     .right-movie {
-        width: 40%;
+        width: 60%;
     }
 
     .left-solar {
@@ -253,16 +298,20 @@ footer {
 
     .right-solar {
         width: 40%;
+    }
+
+    .description {
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 1000px) {
     .left-movie {
-        width: 70%;
+        width: 30%;
     }
 
     .right-movie {
-        width: 30%;
+        width: 70%;
     }
 
     .left-solar {
@@ -271,16 +320,24 @@ footer {
 
     .right-solar {
         width: 30%;
+    }
+
+    .brew-buddy-home {
+        max-height: 70%;
+    }
+
+    .description {
+        width: 60%;
     }
 }
 
 @media screen and (max-width: 800px) {
     .left-movie {
-        width: 80%;
+        width: 20%;
     }
 
     .right-movie {
-        width: 20%;
+        width: 80%;
     }
 
     .left-solar {
@@ -289,6 +346,19 @@ footer {
 
     .right-solar {
         width: 20%;
+    }
+
+    .brew-buddy-home {
+        max-height: 60%;
+    }
+
+    .thesis-home {
+        width: 90%;
+        height: 50%;
+    }
+
+    .description {
+        width: 70%;
     }
 }
 
@@ -313,6 +383,32 @@ footer {
         overflow: hidden;
     }
 
+    p.small-p {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+    .label {
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        background-image: url('../../public/euglena-mobile.png');
+
+        .small-p {
+            padding: 0.5em 3em 3em 3em;
+        }
+    }
+
+    .brew-buddy-home {
+        max-height: 50%;
+        padding-top: 5svh;
+        padding-bottom: 5svh;
+    }
+
     .left-solar {
         z-index: 2;
         position: relative;
@@ -332,14 +428,6 @@ footer {
     }
 
     .left-movie {
-        z-index: 2;
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.85);
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
-
-    .right-movie {
         z-index: 1;
         position: absolute;
         top: 0;
@@ -348,5 +436,24 @@ footer {
         overflow: hidden;
         margin-bottom: 0 !important;
     }
+
+    .right-movie {
+        z-index: 2;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.85);
+        overflow: hidden;
+        margin-bottom: 0 !important;
+    }
     
+    .movie-home {
+        width: 100%;
+        height: 50%;
+    }
+
+    .thesis-home {
+        width: 90%;
+        height: 40%;
+        padding-top: 5svh;
+        padding-bottom: 5svh;
+    }
 }
