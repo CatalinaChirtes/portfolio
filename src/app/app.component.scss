@@ -23,6 +23,14 @@ p.small-p {
     width: 40%;
 }
 
+.description-title {
+    padding-bottom: 1svh;
+}
+
+.description-text {
+    padding-top: 1svh;
+}
+
 a.link-light {
     color: #8e8e8e;
     font-size: 10px;
@@ -178,6 +186,82 @@ footer {
     color: white;
 }
 
+// TABLET SCROLLABLE CONTENT
+
+.ipad-container {
+    position: relative;
+    max-width: 45%;
+    margin: 0 auto;
+}
+
+.ipad-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    pointer-events: none; 
+    z-index: 5;
+}
+
+.webpage-scroll-ipad {
+    position: absolute;
+    top: 8.15%;
+    left: 6.5%;
+    width: 87%; 
+    height: 85%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    z-index: 4;
+}
+
+.webpage-scroll-ipad::-webkit-scrollbar {
+    display: none;
+}
+
+.screen-ipad {
+    width: 100%;
+    height: auto;
+}
+
+// LAPTOP SCROLLABLE CONTENT
+
+.laptop-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.laptop-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    pointer-events: none; 
+    z-index: 5;
+}
+
+.webpage-scroll-laptop {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: 75%; 
+    height: 78%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    z-index: 4;
+}
+
+.webpage-scroll-laptop::-webkit-scrollbar {
+    display: none;
+}
+
+.screen-laptop {
+    width: 100%;
+    height: auto;
+}
+
 // THESIS SECTION
 
 .thesis {
@@ -190,11 +274,6 @@ footer {
     background-image: url('../../public/thesis.png');
     background-size: cover;
     background-position: center center;
-}
-
-.thesis-home {
-    width: 100%;
-    height: 60%;
 }
 
 // SOLAR SOLUTIONS SECTION
@@ -218,11 +297,6 @@ footer {
     background-image: url('../../public/solar-solutions.png');
     background-size: cover;
     background-position: left center;
-}
-
-.solar-home {
-    width: 100%;
-    height: 50%;
 }
 
 // BREW BUDDY SECTION
@@ -259,11 +333,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.movie-home {
-    width: 100%;
-    height: 60%;
 }
 
 .movie {
@@ -303,6 +372,10 @@ footer {
     .description {
         width: 50%;
     }
+
+    .ipad-container {
+        max-width: 60%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -329,6 +402,10 @@ footer {
     .description {
         width: 60%;
     }
+
+    .ipad-container {
+        max-width: 70%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -352,13 +429,12 @@ footer {
         max-height: 60%;
     }
 
-    .thesis-home {
-        width: 90%;
-        height: 50%;
-    }
-
     .description {
         width: 70%;
+    }
+
+    .ipad-container {
+        max-width: 80%;
     }
 }
 
@@ -392,6 +468,14 @@ footer {
         width: 80%;
     }
 
+    .description-title {
+        padding-bottom: 5svh;
+    }
+
+    .description-text {
+        padding-top: 5svh;
+    }
+
     .label {
         left: 50%;
         transform: translateX(-50%);
@@ -405,8 +489,6 @@ footer {
 
     .brew-buddy-home {
         max-height: 50%;
-        padding-top: 5svh;
-        padding-bottom: 5svh;
     }
 
     .left-solar {
@@ -444,16 +526,8 @@ footer {
         overflow: hidden;
         margin-bottom: 0 !important;
     }
-    
-    .movie-home {
-        width: 100%;
-        height: 50%;
-    }
 
-    .thesis-home {
-        width: 90%;
-        height: 40%;
-        padding-top: 5svh;
-        padding-bottom: 5svh;
+    .ipad-container {
+        max-width: 90%;
     }
 }
