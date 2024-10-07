@@ -276,6 +276,28 @@ footer {
     background-position: center center;
 }
 
+// SCHOOL SECTION
+
+.school {
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    object-fit: contain;
+    background-image: url('../../public/letters.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.school-container {
+    max-width: 60%;
+
+    .webpage-scroll-laptop {
+        width: 76%; 
+    }
+}
+
 // SOLAR SOLUTIONS SECTION
 
 .solar {
@@ -376,6 +398,10 @@ footer {
     .ipad-container {
         max-width: 60%;
     }
+
+    .school-container {
+        max-width: 70%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -406,6 +432,10 @@ footer {
     .ipad-container {
         max-width: 70%;
     }
+
+    .school-container {
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -435,6 +465,10 @@ footer {
 
     .ipad-container {
         max-width: 80%;
+    }
+
+    .school-container {
+        max-width: 90%;
     }
 }
 
@@ -529,5 +563,9 @@ footer {
 
     .ipad-container {
         max-width: 90%;
+    }
+
+    .school-container {
+        max-width: 100%;
     }
 }
