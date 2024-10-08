@@ -186,44 +186,6 @@ footer {
     color: white;
 }
 
-// TABLET SCROLLABLE CONTENT
-
-.ipad-container {
-    position: relative;
-    max-width: 45%;
-    margin: 0 auto;
-}
-
-.ipad-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-    pointer-events: none; 
-    z-index: 5;
-}
-
-.webpage-scroll-ipad {
-    position: absolute;
-    top: 8.15%;
-    left: 6.5%;
-    width: 87%; 
-    height: 85%;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    z-index: 4;
-}
-
-.webpage-scroll-ipad::-webkit-scrollbar {
-    display: none;
-}
-
-.screen-ipad {
-    width: 100%;
-    height: auto;
-}
-
 // LAPTOP SCROLLABLE CONTENT
 
 .laptop-container {
@@ -262,6 +224,14 @@ footer {
     height: auto;
 }
 
+.center-laptop {
+    max-width: 60%;
+
+    .webpage-scroll-laptop {
+        width: 76%; 
+    }
+}
+
 // THESIS SECTION
 
 .thesis {
@@ -274,6 +244,7 @@ footer {
     background-image: url('../../public/thesis.png');
     background-size: cover;
     background-position: center center;
+    color: white;
 }
 
 // SCHOOL SECTION
@@ -290,12 +261,27 @@ footer {
     background-position: center center;
 }
 
-.school-container {
-    max-width: 60%;
+// RENT-A-BAUHOF SECTION
 
-    .webpage-scroll-laptop {
-        width: 76%; 
-    }
+.left-rent {
+    width: 40%;
+    overflow: hidden;
+    background-image: url('../../public/login-rent.png');
+    background-size: cover;
+    background-position: right center;
+}
+  
+.right-rent {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rent-a-bauhof {
+    background-color: black;
+    color: white;
 }
 
 // SOLAR SOLUTIONS SECTION
@@ -395,11 +381,7 @@ footer {
         width: 50%;
     }
 
-    .ipad-container {
-        max-width: 60%;
-    }
-
-    .school-container {
+    .center-laptop {
         max-width: 70%;
     }
 }
@@ -410,6 +392,14 @@ footer {
     }
 
     .right-movie {
+        width: 70%;
+    }
+
+    .left-rent {
+        width: 30%;
+    }
+
+    .right-rent {
         width: 70%;
     }
 
@@ -429,11 +419,7 @@ footer {
         width: 60%;
     }
 
-    .ipad-container {
-        max-width: 70%;
-    }
-
-    .school-container {
+    .center-laptop {
         max-width: 80%;
     }
 }
@@ -444,6 +430,14 @@ footer {
     }
 
     .right-movie {
+        width: 80%;
+    }
+
+    .left-rent {
+        width: 20%;
+    }
+
+    .right-rent {
         width: 80%;
     }
 
@@ -463,11 +457,7 @@ footer {
         width: 70%;
     }
 
-    .ipad-container {
-        max-width: 80%;
-    }
-
-    .school-container {
+    .center-laptop {
         max-width: 90%;
     }
 }
@@ -561,11 +551,25 @@ footer {
         margin-bottom: 0 !important;
     }
 
-    .ipad-container {
-        max-width: 90%;
+    .left-rent {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: center center;
+        overflow: hidden;
+        margin-bottom: 0 !important;
     }
 
-    .school-container {
+    .right-rent {
+        z-index: 2;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.85);
+        overflow: hidden;
+        margin-bottom: 0 !important;
+    }
+
+    .center-laptop {
         max-width: 100%;
     }
 }
