@@ -208,7 +208,7 @@ footer {
     top: 12%;
     left: 12%;
     width: 75%; 
-    height: 78%;
+    height: 77.5%;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -232,93 +232,147 @@ footer {
     }
 }
 
-// THESIS SECTION
+// CAROUSEL
 
-.thesis {
+.townhalls {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.townhalls.active {
+    opacity: 1;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-arrow, .next-arrow {
+    cursor: pointer;
+    font-size: 24px;
+    color: #8e8e8e;
+    padding: 0 15px;
+    user-select: none;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+    color: black;
+}
+
+// SECTIONS
+
+.center-section {
     height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     object-fit: contain;
-    background-image: url('../../public/thesis.png');
     background-size: cover;
     background-position: center center;
+}
+
+.right-section {
+    background-color: black;
     color: white;
+
+    .left-part {
+        width: 50%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: right center;
+    }
+      
+    .right-part {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.left-section {
+    background-color: black;
+    color: white;
+
+    .left-part {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+      
+    .right-part {
+        width: 50%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: left center;
+    }
+}
+
+// THESIS SECTION
+
+.thesis {
+    background-image: url('../../public/thesis.png');
+}
+
+// RENT-A-BAUHOF SECTION
+
+.rent-a-bauhof {
+     .left-part {
+        width: 40%;
+        background-image: url('../../public/login-rent.png');
+    }
+
+    .right-part {
+        width: 60%;
+    }
 }
 
 // SCHOOL SECTION
 
 .school {
-    height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    object-fit: contain;
     background-image: url('../../public/letters.png');
-    background-size: cover;
-    background-position: center center;
 }
 
-// RENT-A-BAUHOF SECTION
+// WISE PERFORM SECTION
 
-.left-rent {
-    width: 40%;
-    overflow: hidden;
-    background-image: url('../../public/login-rent.png');
-    background-size: cover;
-    background-position: right center;
-}
-  
-.right-rent {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.wise {
+    .right-part {
+        background-image: url('../../public/wise-pages.png');
+    }
 }
 
-.rent-a-bauhof {
-    background-color: black;
-    color: white;
+// TOWN SECTION
+
+.town {
+    background-image: url('../../public/town.png');
 }
 
 // SOLAR SOLUTIONS SECTION
 
 .solar {
-    background-color: black;
-    color: white;
-}
-
-.left-solar {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-  
-.right-solar {
-    width: 60%;
-    overflow: hidden;
-    background-image: url('../../public/solar-solutions.png');
-    background-size: cover;
-    background-position: left center;
-}
+    .right-part {
+        background-image: url('../../public/solar-solutions.png');
+    }
+} 
 
 // BREW BUDDY SECTION
 
 .brew-buddy {
-    height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    object-fit: contain;
     background-image: url('../../public/brew-buddy-background.png');
-    background-size: cover;
-    background-position: center center;
 }
 
 .brew-buddy-home {
@@ -327,56 +381,15 @@ footer {
 
 // MOVIE NIGHT SECTION
 
-.left-movie {
-    width: 50%;
-    overflow: hidden;
-    background-image: url('../../public/movie-pages.png');
-    background-size: cover;
-    background-position: right center;
-}
-  
-.right-movie {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .movie {
-    background-color: black;
-    color: white;
+    .left-part {
+        background-image: url('../../public/movie-pages.png');
+    }
 }
 
 // SCREEN RESIZE
 
-@media screen and (max-width: 1400px) {
-    .left-solar {
-        width: 50%;
-    }
-
-    .right-solar {
-        width: 50%;
-    }
-}
-
 @media screen and (max-width: 1200px) {
-    .left-movie {
-        width: 40%;
-    }
-
-    .right-movie {
-        width: 60%;
-    }
-
-    .left-solar {
-        width: 60%;
-    }
-
-    .right-solar {
-        width: 40%;
-    }
-
     .description {
         width: 50%;
     }
@@ -384,37 +397,29 @@ footer {
     .center-laptop {
         max-width: 70%;
     }
+
+    .right-section {
+        .left-part {
+            width: 40%;
+        }
+
+        .right-part {
+            width: 60%;
+        }
+    }
+
+    .left-section {
+        .left-part {
+            width: 60%;
+        }
+
+        .right-part {
+            width: 40%;
+        }
+    }
 }
 
 @media screen and (max-width: 1000px) {
-    .left-movie {
-        width: 30%;
-    }
-
-    .right-movie {
-        width: 70%;
-    }
-
-    .left-rent {
-        width: 30%;
-    }
-
-    .right-rent {
-        width: 70%;
-    }
-
-    .left-solar {
-        width: 70%;
-    }
-
-    .right-solar {
-        width: 30%;
-    }
-
-    .brew-buddy-home {
-        max-height: 70%;
-    }
-
     .description {
         width: 60%;
     }
@@ -422,37 +427,33 @@ footer {
     .center-laptop {
         max-width: 80%;
     }
+    
+    .brew-buddy-home {
+        max-height: 70%;
+    }
+
+    .right-section {
+        .left-part {
+            width: 30%;
+        }
+
+        .right-part {
+            width: 70%;
+        }
+    }
+
+    .left-section {
+        .left-part {
+            width: 70%;
+        }
+
+        .right-part {
+            width: 30%;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
-    .left-movie {
-        width: 20%;
-    }
-
-    .right-movie {
-        width: 80%;
-    }
-
-    .left-rent {
-        width: 20%;
-    }
-
-    .right-rent {
-        width: 80%;
-    }
-
-    .left-solar {
-        width: 80%;
-    }
-
-    .right-solar {
-        width: 20%;
-    }
-
-    .brew-buddy-home {
-        max-height: 60%;
-    }
-
     .description {
         width: 70%;
     }
@@ -460,27 +461,39 @@ footer {
     .center-laptop {
         max-width: 90%;
     }
+    
+    .brew-buddy-home {
+        max-height: 60%;
+    }
+
+    .right-section {
+        .left-part {
+            width: 20%;
+        }
+
+        .right-part {
+            width: 80%;
+        }
+    } 
+
+    .left-section {
+        .left-part {
+            width: 80%;
+        }
+
+        .right-part {
+            width: 20%;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .row {
-        position: relative;
-        margin-bottom: 0 !important;
-    }
-
     video {
         display: none !important;
     }
 
     .loading-image {
         display: block;
-    }
-
-    .column {
-        width: 100%;
-        position: relative;
-        float: none;
-        overflow: hidden;
     }
 
     p.small-p {
@@ -499,6 +512,14 @@ footer {
     .description-text {
         padding-top: 5svh;
     }
+    
+    .center-laptop {
+        max-width: 100%;
+    }
+
+    .brew-buddy-home {
+        max-height: 50%;
+    }
 
     .label {
         left: 50%;
@@ -511,65 +532,67 @@ footer {
         }
     }
 
-    .brew-buddy-home {
-        max-height: 50%;
+    .right-section {
+        .row {
+            position: relative;
+            margin-bottom: 0 !important;
+        }
+        
+        .column {
+            width: 100%;
+            position: relative;
+            float: none;
+            overflow: hidden;
+        }
+
+        .left-part {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center center;
+            overflow: hidden;
+            margin-bottom: 0 !important;
+        }
+
+        .right-part {
+            z-index: 2;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.85);
+            overflow: hidden;
+            margin-bottom: 0 !important;
+        }
     }
 
-    .left-solar {
-        z-index: 2;
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.85);
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
+    .left-section {
+        .row {
+            position: relative;
+            margin-bottom: 0 !important;
+        }
+        
+        .column {
+            width: 100%;
+            position: relative;
+            float: none;
+            overflow: hidden;
+        }
 
-    .right-solar {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-position: center center;
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
+        .left-part {
+            z-index: 2;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.85);
+            overflow: hidden;
+            margin-bottom: 0 !important;
+        }
 
-    .left-movie {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-position: center center;
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
-
-    .right-movie {
-        z-index: 2;
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.85);
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
-
-    .left-rent {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-position: center center;
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
-
-    .right-rent {
-        z-index: 2;
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.85);
-        overflow: hidden;
-        margin-bottom: 0 !important;
-    }
-
-    .center-laptop {
-        max-width: 100%;
+        .right-part {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center center;
+            overflow: hidden;
+            margin-bottom: 0 !important;
+        }
     }
 }

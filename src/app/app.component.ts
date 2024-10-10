@@ -15,8 +15,14 @@ import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 })
 export class AppComponent implements AfterViewInit {
   title = 'portfolio';
+  currentSlide: number = 0;
 
   ngAfterViewInit(): void {
+    this.initializeScrollDots();
+    this.initCarousel();
+  }
+
+  initializeScrollDots(): void {
     const dots = document.querySelectorAll('.dot');
     const sections = document.querySelectorAll('.snap-section');
     const dotContainer = document.querySelector('.dot-container') as HTMLElement;
@@ -58,5 +64,36 @@ export class AppComponent implements AfterViewInit {
 
   removeActiveClass(dots: NodeListOf<Element>): void {
     dots.forEach(dot => dot.classList.remove('active'));
+  }
+
+  initCarousel(): void {
+    const slides = document.querySelectorAll('.townhalls');
+    const nextArrow = document.querySelector('.next-arrow') as HTMLElement;
+    const prevArrow = document.querySelector('.prev-arrow') as HTMLElement;
+  
+    if (!nextArrow || !prevArrow || slides.length === 0) return;
+  
+    this.showSlide(this.currentSlide, slides);
+  
+    nextArrow.addEventListener('click', () => {
+      this.currentSlide = (this.currentSlide + 1) % slides.length;
+      this.showSlide(this.currentSlide, slides);
+    });
+  
+    prevArrow.addEventListener('click', () => {
+      this.currentSlide = (this.currentSlide - 1 + slides.length) % slides.length;
+      this.showSlide(this.currentSlide, slides);
+    });
+  }
+  
+  showSlide(index: number, slides: NodeListOf<Element>): void {
+    slides.forEach((slide, i) => {
+      if (slide instanceof HTMLElement) {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      }
+    });
   }
 }
