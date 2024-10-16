@@ -325,7 +325,7 @@ footer {
 // THESIS SECTION
 
 .thesis {
-    background-image: url('../../public/thesis.png');
+    background-image: url('../../public/thesis-pages.jpg');
 }
 
 // RENT-A-BAUHOF SECTION
@@ -333,7 +333,7 @@ footer {
 .rent-a-bauhof {
      .left-part {
         width: 40%;
-        background-image: url('../../public/login-rent.png');
+        background-image: url('../../public/rent-pages.jpg');
     }
 
     .right-part {
@@ -344,48 +344,57 @@ footer {
 // SCHOOL SECTION
 
 .school {
-    background-image: url('../../public/letters.png');
+    background-image: url('../../public/school-pages.jpg');
 }
 
-// WISE PERFORM SECTION
+// GEMEINDE CMS SECTION
 
-.wise {
+.cms {
+    .left-part {
+        width: 60%;
+        background-image: url('../../public/cms-pages.jpg');
+    }
+
     .right-part {
-        background-image: url('../../public/wise-pages.png');
+        width: 40%;
+    }
+
+    .cms-home {
+        max-height: 70%;
     }
 }
 
 // TOWN SECTION
 
 .town {
-    background-image: url('../../public/town.png');
+    background-image: url('../../public/town-pages.jpg');
 }
 
-// SOLAR SOLUTIONS SECTION
+// WISE PERFORM SECTION
 
-.solar {
+.wise {
     .right-part {
-        background-image: url('../../public/solar-solutions.png');
+        background-image: url('../../public/wise-pages.jpg');
     }
-} 
+}
 
 // BREW BUDDY SECTION
 
 .brew-buddy {
-    background-image: url('../../public/brew-buddy-background.png');
+    background-image: url('../../public/brew-pages.jpg');
 }
 
 .brew-buddy-home {
     max-height: 80%;
 }
 
-// MOVIE NIGHT SECTION
+// SOLAR SOLUTIONS SECTION
 
-.movie {
-    .left-part {
-        background-image: url('../../public/movie-pages.png');
+.solar {
+    .right-part {
+        background-image: url('../../public/solar-pages.jpg');
     }
-}
+} 
 
 // SCREEN RESIZE
 
@@ -474,6 +483,10 @@ footer {
         .right-part {
             width: 80%;
         }
+
+        .cms-home {
+            max-height: 60%;
+        }
     } 
 
     .left-section {
@@ -561,6 +574,10 @@ footer {
             background-color: rgba(0, 0, 0, 0.85);
             overflow: hidden;
             margin-bottom: 0 !important;
+        }
+
+        .cms-home {
+            max-height: 50%;
         }
     }
 

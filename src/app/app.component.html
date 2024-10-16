@@ -14,7 +14,7 @@
 <div class="component">
     <section class="snap-section" id="section0">
         <app-toolbar></app-toolbar>
-        <img id="loading-image" src="main-screen.jpg" alt="Main Screen" class="loading-image" />
+        <img id="loading-image" src="main-screen.jpg" alt="Main Screen" class="loading-image" loading="lazy" />
         <video id="video" [muted]="'muted'" autoplay muted>
             <source src="animation.mp4" type="video/mp4">
         </video>
@@ -26,9 +26,9 @@
         </div>
         <p class="title-p description description-title">Machine Learning Algorithms for Clothing Articles Classification</p>
         <div class="laptop-container center-laptop">
-            <img class="laptop-image" src="laptop.png" alt="Laptop" />
+            <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
             <div class="webpage-scroll-laptop">
-                <img class="screen-laptop" src="thesis-home.png" alt="Thesis Homepage" />
+                <img class="screen-laptop" src="thesis-home.jpg" alt="Thesis Homepage" loading="lazy" />
             </div>
         </div>
         <p class="small-p description description-text">A comparative analysis that investigates the performances and effectiveness at the clothing classification task of three proposed CNN-based algorithms.</p>
@@ -48,9 +48,9 @@
                 </div>
                 <p class="title-p description-title">Rent-A-Bauhof</p>
                 <div class="laptop-container">
-                    <img class="laptop-image" src="laptop.png" alt="Laptop" />
+                    <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
                     <div class="webpage-scroll-laptop">
-                        <img class="screen-laptop" src="rent-a-bauhof.png" alt="Rent-A-Bauhof Homepage" />
+                        <img class="screen-laptop" src="rent-home.jpg" alt="Rent-A-Bauhof Homepage" loading="lazy" />
                     </div>
                 </div>
                 <p class="small-p description-text">A platform for borrowing and renting machinery with the people in your comunity.</p>
@@ -64,30 +64,25 @@
         </div>
         <p class="title-p description description-title">Grundschule Elementary School</p>
         <div class="laptop-container center-laptop">
-            <img class="laptop-image" src="laptop.png" alt="Laptop" />
+            <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
             <div class="webpage-scroll-laptop">
-                <img class="screen-laptop" src="school.png" alt="Elementary School" />
+                <img class="screen-laptop" src="school-home.jpg" alt="Elementary School" loading="lazy" />
             </div>
         </div>
         <p class="small-p description description-text">Homepage concept for an elementary school website.</p>
     </section>
 
-    <section class="left-section wise snap-section" id="section4">
+    <section class="right-section cms snap-section" id="section4">
         <div class="row">
-            <div class="column left-part">
+            <div class="column left-part"></div>
+            <div class="column right-part">
                 <div class="label">
                     <p class="small-p">Adobe XD design</p>
                 </div>
-                <p class="title-p description-title">Wise Perform</p>
-                <div class="laptop-container">
-                    <img class="laptop-image" src="laptop.png" alt="Laptop" />
-                    <div class="webpage-scroll-laptop">
-                        <img class="screen-laptop" src="wise-home.png" alt="Wise Perform Homepage" />
-                    </div>
-                </div>
-                <p class="small-p description-text">Web platform for creating and supervising custom surveys.</p>
+                <p class="title-p description-title">GemeindeCMS</p>
+                <img class="cms-home" src="cms-home.svg" alt="GemeindeCMS Home Page" loading="lazy">
+                <p class="small-p description-text">A mobile platform dedicated to news, alerts and events for the members of a comunity.</p>
             </div>
-            <div class="column right-part"></div>
         </div>
     </section>
 
@@ -97,10 +92,10 @@
         </div>
         <p class="title-p description description-title">Townhall Websites</p>
         <div class="laptop-container center-laptop">
-            <img class="laptop-image" src="laptop.png" alt="Laptop" />
+            <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
             <div class="webpage-scroll-laptop">
-                <img class="screen-laptop townhalls active" src="town1.png" alt="Townhall 1" />
-                <img class="screen-laptop townhalls" src="town2.png" alt="Townhall 2" />
+                <img class="screen-laptop townhalls active" src="town1-home.jpg" alt="Townhall 1" loading="lazy" />
+                <img class="screen-laptop townhalls" src="town2-home.jpg" alt="Townhall 2" loading="lazy" />
             </div>
             <div class="carousel-controls">
                 <span class="prev-arrow">&#10094;</span>
@@ -110,20 +105,20 @@
         <p class="small-p description description-text">Presentation websites with news and important information for townhalls.</p>
     </section>
 
-    <section class="left-section solar snap-section" id="section6">
+    <section class="left-section wise snap-section" id="section6">
         <div class="row">
             <div class="column left-part">
                 <div class="label">
-                    <p class="small-p">Figma design</p>
+                    <p class="small-p">Adobe XD design</p>
                 </div>
-                <p class="title-p description-title">Solar Solutions</p>
+                <p class="title-p description-title">Wise Perform</p>
                 <div class="laptop-container">
-                    <img class="laptop-image" src="laptop.png" alt="Laptop" />
+                    <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
                     <div class="webpage-scroll-laptop">
-                        <img class="screen-laptop" src="solar-home.png" alt="Solar Solutions Homepage" />
+                        <img class="screen-laptop" src="wise-home.jpg" alt="Wise Perform Homepage" loading="lazy" />
                     </div>
                 </div>
-                <p class="small-p description-text">Web platform for recommending and building solar panel solutions.</p>
+                <p class="small-p description-text">Web platform for creating and supervising custom surveys.</p>
             </div>
             <div class="column right-part"></div>
         </div>
@@ -134,36 +129,31 @@
             <p class="small-p">Angular Ionic app</p>
         </div>
         <p class="title-p description description-title">Brew Buddy</p>
-        <img class="brew-buddy-home" src="brew-buddy-home.svg" alt="Brew Buddy Home Page">
+        <img class="brew-buddy-home" src="brew-home.svg" alt="Brew Buddy Home Page">
         <p class="small-p description description-text">An intuitive mobile tea companion that allows users to manage their tea collection.</p>
         <div class="link-btn">
-            <img src="arrow.svg" alt="Arrow">
+            <img src="arrow.svg" alt="Arrow" loading="lazy">
             <a mat-button class="link-light" href="https://github.com/CatalinaChirtes/brew-buddy" target="_blank">LEARN MORE</a>
             <img style="transform: rotate(180deg);" src="arrow.svg" alt="Arrow">
         </div>
     </section>
 
-    <section class="right-section movie snap-section" id="section8">
+    <section class="left-section solar snap-section" id="section8">
         <div class="row">
-            <div class="column left-part"></div>
-            <div class="column right-part">
+            <div class="column left-part">
                 <div class="label">
-                    <p class="small-p">HTML,CSS,PHP app</p>
+                    <p class="small-p">Figma design</p>
                 </div>
-                <p class="title-p description-title">Movie Night</p>
+                <p class="title-p description-title">Solar Solutions</p>
                 <div class="laptop-container">
-                    <img class="laptop-image" src="laptop.png" alt="Laptop" />
+                    <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
                     <div class="webpage-scroll-laptop">
-                        <img class="screen-laptop" src="movie-home.png" alt="Movie Night Homepage" />
+                        <img class="screen-laptop" src="solar-home.jpg" alt="Solar Solutions Homepage" loading="lazy" />
                     </div>
                 </div>
-                <p class="small-p description-text">A user-friendly website for cinemas that allows users to browse movies, check showtimes, and book tickets.</p>
-                <div class="link-btn">
-                    <img src="arrow.svg" alt="Arrow">
-                    <a mat-button class="link-dark" href="https://github.com/CatalinaChirtes/MovieNight_cinema_booking_website" target="_blank">LEARN MORE</a>
-                    <img style="transform: rotate(180deg);" src="arrow.svg" alt="Arrow">
-                </div>
+                <p class="small-p description-text">Web platform for recommending and building solar panel solutions.</p>
             </div>
+            <div class="column right-part"></div>
         </div>
     </section>
 
