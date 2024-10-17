@@ -1,6 +1,5 @@
 <div class="dot-container">
     <ul class="dot-indicator">
-      <li class="dot" data-section="1"></li>
       <li class="dot" data-section="2"></li>
       <li class="dot" data-section="3"></li>
       <li class="dot" data-section="4"></li>
@@ -8,6 +7,7 @@
       <li class="dot" data-section="6"></li>
       <li class="dot" data-section="7"></li>
       <li class="dot" data-section="8"></li>
+      <li class="dot" data-section="9"></li>
     </ul>
 </div>
 
@@ -20,18 +20,40 @@
         </video>
     </section>
 
-    <section class="center-section thesis snap-section" id="section1">
+    <section class="about-section snap-section" id="section1">
+        <div class="row">
+            <div class="column left-part">
+                <img class="profile" src="profile.png" alt="Profile" loading="lazy" />
+            </div>
+            <div class="column right-part">
+                <div class="about-container">
+                    <div class="hello-container">
+                        <p class="title-p name">Hi, I'm Cătălina</p>
+                        <img class="flower" src="flower.png" alt="Flower">
+                    </div>
+                    <p class="small">💻 For the past three years I have worked as a <span style="color: #b7818d;">full stack software developer</span>, mastering skills in frontend development using <span style="color: #b7818d;">Angular</span> & backend development with <span style="color: #b7818d;">Python</span>.</p>
+                    <p class="small">🎨 I love exploring my creativity, and so as a <span style="color: #b7818d;">UI/UX designer</span> I was able to bring to life my concepts with the help of tools such as <span style="color: #b7818d;">Adobe XD</span> and <span style="color: #b7818d;">Figma</span>.</p>
+                    <p class="small">🎓 I recently obtained my <span style="color: #b7818d;">Bachelor of Computer Science</span> from the <span style="color: #b7818d;">West University of Timișoara</span> and I am currently enrolled at the <span style="color: #b7818d;">Master in Artificial Intelligence and Distributed Computing</span>, since I am eager to explore and learn how can we integrate AI more in our day to day lives, to advance the technology and simplify our daily tasks.</p>
+                    <p class="small">☕ Aside from work, I enjoy reading, travelling, baking, drinking lots of tea & coffee, taking care of my plants, and watching classic movies & sitcoms.</p>
+                    <p class="small">🐾 Did I mention that I have two <span style="color: #b7818d;">cats</span>? Meet Țiți & Miți</p>
+                    <img class="cats" src="cats.png" alt="Cats">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="center-section thesis snap-section" id="section2">
         <div class="label">
             <p class="small-p">Angular app</p>
         </div>
-        <p class="title-p description description-title">Machine Learning Algorithms for Clothing Articles Classification</p>
+        <p class="title-p description description-title">Clothing Classification with Machine Learning</p>
         <div class="laptop-container center-laptop">
             <img class="laptop-image" src="laptop.png" alt="Laptop" loading="lazy" />
             <div class="webpage-scroll-laptop">
                 <img class="screen-laptop" src="thesis-home.jpg" alt="Thesis Homepage" loading="lazy" />
             </div>
         </div>
-        <p class="small-p description description-text">A comparative analysis that investigates the performances and effectiveness at the clothing classification task of three proposed CNN-based algorithms.</p>
+        <p class="small-p description description-text">A comparative analysis of three proposed CNN-based algorithms at the clothing classification task.</p>
         <div class="link-btn">
             <img src="arrow.svg" alt="Arrow">
             <a mat-button class="link-light" href="https://github.com/CatalinaChirtes/Machine-Learning-Algorithms-for-Clothing-Articles-Classfication" target="_blank">LEARN MORE</a>
@@ -39,10 +61,9 @@
         </div>
     </section>
 
-    <section class="right-section rent-a-bauhof snap-section" id="section2">
+    <section class="left-section rent-a-bauhof snap-section" id="section3">
         <div class="row">
-            <div class="column left-part"></div>
-            <div class="column right-part">
+            <div class="column left-part">
                 <div class="label">
                     <p class="small-p">Adobe XD design</p>
                 </div>
@@ -55,10 +76,11 @@
                 </div>
                 <p class="small-p description-text">A platform for borrowing and renting machinery with the people in your comunity.</p>
             </div>
+            <div class="column right-part"></div>
         </div>
     </section>
 
-    <section class="center-section school snap-section" id="section3">
+    <section class="center-section school snap-section" id="section4">
         <div class="label">
             <p class="small-p">Adobe XD design</p>
         </div>
@@ -72,10 +94,9 @@
         <p class="small-p description description-text">Homepage concept for an elementary school website.</p>
     </section>
 
-    <section class="right-section cms snap-section" id="section4">
+    <section class="left-section cms snap-section" id="section5">
         <div class="row">
-            <div class="column left-part"></div>
-            <div class="column right-part">
+            <div class="column left-part">
                 <div class="label">
                     <p class="small-p">Adobe XD design</p>
                 </div>
@@ -83,10 +104,11 @@
                 <img class="cms-home" src="cms-home.svg" alt="GemeindeCMS Home Page" loading="lazy">
                 <p class="small-p description-text">A mobile platform dedicated to news, alerts and events for the members of a comunity.</p>
             </div>
+            <div class="column right-part"></div>
         </div>
     </section>
 
-    <section class="center-section town snap-section" id="section5">
+    <section class="center-section town snap-section" id="section6">
         <div class="label">
             <p class="small-p">Adobe XD design</p>
         </div>
@@ -98,14 +120,13 @@
                 <img class="screen-laptop townhalls" src="town2-home.jpg" alt="Townhall 2" loading="lazy" />
             </div>
             <div class="carousel-controls">
-                <span class="prev-arrow">&#10094;</span>
-                <span class="next-arrow">&#10095;</span>
+                <span class="next-arrow">&#10230;</span>
             </div>
         </div>
         <p class="small-p description description-text">Presentation websites with news and important information for townhalls.</p>
     </section>
 
-    <section class="left-section wise snap-section" id="section6">
+    <section class="left-section wise snap-section" id="section7">
         <div class="row">
             <div class="column left-part">
                 <div class="label">
@@ -124,7 +145,7 @@
         </div>
     </section>
 
-    <section class="center-section brew-buddy snap-section" id="section7">
+    <section class="center-section brew-buddy snap-section" id="section8">
         <div class="label">
             <p class="small-p">Angular Ionic app</p>
         </div>
@@ -138,7 +159,7 @@
         </div>
     </section>
 
-    <section class="left-section solar snap-section" id="section8">
+    <section class="left-section solar snap-section" id="section9">
         <div class="row">
             <div class="column left-part">
                 <div class="label">

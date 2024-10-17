@@ -42,6 +42,10 @@ a[mat-button]:hover {
     --mat-icon-button-ripple-color: transparent;
 }
 
+.button-icon {
+    display: none;
+}
+
 @media only screen and (max-width: 800px) {
     .name span {
         display: none;
@@ -59,5 +63,13 @@ a[mat-button]:hover {
 
     .last {
         padding-right: 0em;
+    }
+
+    .custom-button {
+        display: none;
+    }
+
+    .button-icon {
+        display: inline-block;
     }
 }

@@ -33,22 +33,23 @@ export class AppComponent implements AfterViewInit {
     componentContainer.addEventListener('scroll', () => {
       const scrollPosition = componentContainer.scrollTop;
       const firstSectionHeight = (sections[0] as HTMLElement).offsetHeight;
+      const aboutSectionHeight = (sections[1] as HTMLElement).offsetHeight;
 
-      if (scrollPosition >= firstSectionHeight) {
+      if (scrollPosition >= firstSectionHeight + aboutSectionHeight) {
         dotContainer.style.display = 'block';
       } else {
         dotContainer.style.display = 'none';
       }
 
       sections.forEach((section: Element, index: number) => {
-        if (index === 0) return;
+        if (index === 0 || index == 1) return;
 
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = (section as HTMLElement).clientHeight;
 
         if (scrollPosition >= sectionTop - sectionHeight / 2 && scrollPosition < sectionTop + sectionHeight / 2) {
           this.removeActiveClass(dots);
-          dots[index - 1].classList.add('active');
+          dots[index - 2].classList.add('active');
         }
       });
     });
@@ -57,7 +58,7 @@ export class AppComponent implements AfterViewInit {
       dot.addEventListener('click', () => {
         this.removeActiveClass(dots);
         dot.classList.add('active');
-        sections[index + 1].scrollIntoView({ behavior: 'smooth' });
+        sections[index + 2].scrollIntoView({ behavior: 'smooth' });
       });
     });
   }
@@ -69,19 +70,13 @@ export class AppComponent implements AfterViewInit {
   initCarousel(): void {
     const slides = document.querySelectorAll('.townhalls');
     const nextArrow = document.querySelector('.next-arrow') as HTMLElement;
-    const prevArrow = document.querySelector('.prev-arrow') as HTMLElement;
   
-    if (!nextArrow || !prevArrow || slides.length === 0) return;
+    if (!nextArrow || slides.length === 0) return;
   
     this.showSlide(this.currentSlide, slides);
   
     nextArrow.addEventListener('click', () => {
       this.currentSlide = (this.currentSlide + 1) % slides.length;
-      this.showSlide(this.currentSlide, slides);
-    });
-  
-    prevArrow.addEventListener('click', () => {
-      this.currentSlide = (this.currentSlide - 1 + slides.length) % slides.length;
       this.showSlide(this.currentSlide, slides);
     });
   }

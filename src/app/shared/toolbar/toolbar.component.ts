@@ -12,5 +12,11 @@ import { MatMenuModule } from '@angular/material/menu';
   styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {
-  
+  scrollToSection(sectionId: string): void {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState({}, '', '/portfolio');
+    }
+  }
 }
