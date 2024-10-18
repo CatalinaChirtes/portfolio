@@ -20,29 +20,40 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.initializeScrollDots();
     this.initCarousel();
+  
+    window.addEventListener('resize', () => {
+      this.initializeScrollDots();
+    });
+  
+    window.addEventListener('load', () => {
+      this.initializeScrollDots();
+    });
   }
-
+  
   initializeScrollDots(): void {
     const dots = document.querySelectorAll('.dot');
     const sections = document.querySelectorAll('.snap-section');
     const dotContainer = document.querySelector('.dot-container') as HTMLElement;
+    const componentContainer = document.querySelector('.component') as HTMLElement;
 
     dotContainer.style.display = 'none';
 
-    const componentContainer = document.querySelector('.component') as HTMLElement;
     componentContainer.addEventListener('scroll', () => {
       const scrollPosition = componentContainer.scrollTop;
-      const firstSectionHeight = (sections[0] as HTMLElement).offsetHeight;
-      const aboutSectionHeight = (sections[1] as HTMLElement).offsetHeight;
+  
+      const firstSectionHeight = sections[0].getBoundingClientRect().height;
+      const aboutSectionHeight = sections[1].scrollHeight;
 
-      if (scrollPosition >= firstSectionHeight + aboutSectionHeight) {
+      const totalHeightBeforeDots = firstSectionHeight + aboutSectionHeight;
+  
+      if (scrollPosition >= totalHeightBeforeDots - 50) {
         dotContainer.style.display = 'block';
       } else {
         dotContainer.style.display = 'none';
       }
 
       sections.forEach((section: Element, index: number) => {
-        if (index === 0 || index == 1) return;
+        if (index === 0 || index === 1) return;
 
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = (section as HTMLElement).clientHeight;
