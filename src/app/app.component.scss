@@ -308,65 +308,36 @@ footer {
     background-color: black;
     color: white;
     display: flex;
+}
 
-    .left-part {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-      
-    .right-part {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-    }
+.profile {
+    float: left;
+    width: 60%;
+    height: auto;
+}
 
-    .profile {
-        width: 100%;
-        height: auto;
-        display: block;
-        position: relative;
-        pointer-events: none; 
-        z-index: 5;
-    }
+p.small {
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 1em;
+    text-align: justify; 
+}
 
-    p.small {
-        font-size: 14px;
-        font-weight: 300;
-        padding-top: 1em;
-        text-align: left; 
-    }
+.about-container {
+    padding-top: 7em;
+    padding-left: 3em;
+    padding-right: 3em;
+    text-align: justify;
+}
 
-    .about-container {
-        padding-left: 1em;
-        padding-right: 5em;
-        align-content: flex-start;
-    }
+.name {
+    text-align: justify;
+}
 
-    .hello-container {
-        display: flex;
-        align-items: center;
-
-        .flower {
-            width: 20px; 
-            height: 20px;
-            padding-left: 0.5em;
-        }
-
-        .name {
-            font-weight: bold;
-        }
-    }
-
-    .cats { 
-        padding-top: 2em;
-        width: 50%;
-        height: auto;
-    }
+.cats { 
+    padding-top: 2em;
+    width: 25%;
+    height: auto;
 }
 
 // THESIS SECTION
@@ -445,6 +416,18 @@ footer {
 
 // SCREEN RESIZE
 
+@media screen and (max-width: 1600px) {
+    .about-container {
+        padding-top: 5em;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .about-container {
+        padding-top: 4em;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .description {
         width: 50%;
@@ -462,6 +445,15 @@ footer {
         .right-part {
             width: 40%;
         }
+    }
+
+    .about-container {
+        padding-top: 3em;
+    }
+
+    .cats {
+        width: 30%;
+        height: auto;
     }
 }
 
@@ -486,6 +478,15 @@ footer {
         .right-part {
             width: 30%;
         }
+    }
+
+    .about-container {
+        padding-top: 2em;
+    }
+
+    .cats {
+        width: 40%;
+        height: auto;
     }
 }
 
@@ -519,6 +520,15 @@ footer {
             max-height: 60%;
         }
     }
+
+    .about-container {
+        padding-top: 1em;
+    }
+
+    .cats {
+        width: 50%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -533,6 +543,14 @@ footer {
     p.small-p {
         padding-left: 2em;
         padding-right: 2em;
+    }
+
+    p.title-p {
+        font-size: 14px;
+    }
+
+    p.small-p.euglena {
+        font-size: 10px;
     }
 
     .description {
@@ -600,5 +618,28 @@ footer {
         .cms-home {
             max-height: 50%;
         }
+    }
+
+    .profile {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-container {
+        padding-top: 23em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    .about-section {
+        height: auto;
+        min-height: 100svh;
+    }
+
+    .cats {
+        width: 100%;
+        height: auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 }
